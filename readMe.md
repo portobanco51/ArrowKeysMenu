@@ -30,7 +30,7 @@
 ###
 
 ```console
-git clone https://github.com/portobanco51/bashMenu.git
+git clone https://github.com/portobanco51/ArrowKeysMenu.git
 ```
 or
 ```console
