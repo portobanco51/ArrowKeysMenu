@@ -46,7 +46,7 @@ wget https://raw.githubusercontent.com/portobanco51/ArrowKeysMenu/main/menu.sh
 ```sh
 #!/bin/bash
 
-source ./bashMenu/menu.sh
+source ./ArrowKeysMenu/menu.sh
 
 OPTIONS=('Option1' 'Option2' 'Option3')
 clear
