@@ -34,7 +34,7 @@ git clone https://github.com/portobanco51/ArrowKeysMenu.git
 ```
 or
 ```console
-wget https://raw.githubusercontent.com/portobanco51/bashMenu/main/menu.sh
+wget https://raw.githubusercontent.com/portobanco51/ArrowKeysMenu/main/menu.sh
 ```
 
 ###
