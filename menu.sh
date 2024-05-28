@@ -1,23 +1,33 @@
 #!/bin/bash
 
 function MENU() {
+  # COLORS
+  GRAY="$(tput setaf 0; tput bold)"
+  RED="$(tput setaf 1; tput bold)"
+  GREEN="$(tput setaf 2; tput bold)"
+  YELLOW="$(tput setaf 3; tput bold; tput smul)"
+  BLUE="$(tput setaf 4; tput bold)"
+  MAGENTA="$(tput setaf 5; tput bold)"
+  CYAN="$(tput setaf 6; tput bold)"
+  WHITE="$(tput setaf 7; tput bold)"
+  EOS="$(tput sgr0)"
+
+  # MENU
   PS3=('Please enter your choice: ')
   DIV="===================="
-  YELLOW="\033[0;33m"
-  GRAY="\033[1;30m"
-  GREEN="\033[1;32m"
-  NC="\033[0m"
-  INDICATOR="<"
+  ARROW="$(tput setaf 3; tput bold)"
+  INDICATOR="-->"
   SELECTED=0
   OPTIONS=("$@")
   LENGTH=$#
   
+  # FUNCTIONS
   PRINT_MENU() {
     # runs clear to prevent infinite scroll when choosing
     clear
     # display menu header
-    echo -e "$GREEN$PS3$NC"
-    echo -e "$GREEN$DIV$NC"
+    echo -e "$GREEN$PS3$EOS"
+    echo -e "$GREEN$DIV$EOS"
     # display menu options
     for (( i=0;i<(($LENGTH));i++ ))
     do
@@ -25,20 +35,20 @@ function MENU() {
       # renders current option in bold
       then
         OPT=${OPTIONS[$i]}
-        echo -e "\n  $YELLOW$OPT $INDICATOR$NC"
+        echo -e "\n  $ARROW$INDICATOR$EOS $YELLOW$OPT$EOS"
       # renders other options
       else
         OPT=${OPTIONS[$i]}
-        echo -e "\n$GRAY$OPT$NC"
+        echo -e "\n$GRAY$OPT$EOS"
       fi
     done
     # display menu footer
-    echo -e "\n$GREEN$DIV$NC"
+    echo -e "\n$GREEN$DIV$EOS"
   }
 
   PRINT_MENU
 
-  # read user input
+  # read user input // navigation
   while read -rsn1 input
   do
     case $input in
@@ -66,6 +76,8 @@ function MENU() {
   done
 }
 
+#################################################################################################################
+#
 # USAGE
 # Once the menu.sh script is located on the desired directory, source in your code
 #
@@ -88,3 +100,7 @@ function MENU() {
 # 
 # echo -e "\nYou selected: $RESULT" >> echoes the selected option value
 # to the terminal 
+#
+# Enjoy!
+#
+#################################################################################################################
