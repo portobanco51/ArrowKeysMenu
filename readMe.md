@@ -51,11 +51,19 @@ wget https://raw.githubusercontent.com/portobanco51/ArrowKeysMenu/main/menu.sh
 ```sh
 #!/bin/bash
 
+# Source the script
 source ./ArrowKeysMenu/menu.sh
 
-PS3="Choose an option from the menu below: "
+# Declare prompt
+PROMPT="Choose an option from the menu below: "
+
+# Declare options array
 OPTIONS=('Kali Linux (Best)' 'FreeBSD' 'Ubuntu' 'Windows 11' 'MacOS' 'Other')
-MENU "${PS3}" "${OPTIONS}"
+
+# Call the function and pass the arguments
+MENU "${PROMPT}" "${OPTIONS}"
+
+# Extract the selected option
 RESULT=${OPTIONS[$?]}
 
 echo -e "\nYou selected: $RESULT"
