@@ -1,6 +1,7 @@
 #!/bin/bash
 
 function MENU() {
+
   # COLORS
   GRAY="$(tput setaf 0; tput bold)"
   RED="$(tput setaf 1; tput bold)"
@@ -13,64 +14,64 @@ function MENU() {
   EOS="$(tput sgr0)"
 
   # MENU
-  PS3=('Please enter your choice: ')
+  PROMPT=("$1")
   DIV="===================="
   ARROW="$(tput setaf 3; tput bold)"
   INDICATOR="-->"
   SELECTED=0
-  OPTIONS=("$@")
-  LENGTH=$#
+  OPTIONS="${@:2}"
+  LENGTH="$((${#OPTIONS[@]} - 4))"
   
   # FUNCTIONS
   PRINT_MENU() {
-    # runs clear to prevent infinite scroll when choosing
+    # Runs clear to prevent infinite scroll when choosing
     clear
-    # display menu header
-    echo -e "$GREEN$PS3$EOS"
+    # Displays menu header
+    echo -e "$GREEN$PROMPT$EOS"
     echo -e "$GREEN$DIV$EOS"
-    # display menu options
-    for (( i=0;i<(($LENGTH));i++ ))
+    # Displays menu options
+    for (( i=0;i<${#OPTIONS[@]};i++ ))
     do
       if [[ $SELECTED -eq $i ]]
-      # renders current option in bold
+      # Renders current option in bold
       then
         OPT=${OPTIONS[$i]}
         echo -e "\n  $ARROW$INDICATOR$EOS $YELLOW$OPT$EOS"
-      # renders other options
+      # Renders other options
       else
         OPT=${OPTIONS[$i]}
         echo -e "\n$GRAY$OPT$EOS"
       fi
     done
-    # display menu footer
+    # Displays menu footer
     echo -e "\n$GREEN$DIV$EOS"
   }
 
   PRINT_MENU
 
-  # read user input // navigation
+  # Reads user input // Navigation
   while read -rsn1 input
   do
     case $input in
       "A")
         if [[ $SELECTED -lt 1 ]]
         then
-          SELECTED=$(($LENGTH-1))
+          SELECTED=$(($LENGTH + 3))
         else
-          SELECTED=$(($SELECTED-1))
+          SELECTED=$(($SELECTED - 1))
         fi
         PRINT_MENU
        ;;
       "B")
-        if [[ $SELECTED -gt $(($LENGTH-2)) ]]
+        if [[ $SELECTED -gt $(($LENGTH + 2)) ]]
         then
           SELECTED=0
         else
-          SELECTED=$(($SELECTED+1))
+          SELECTED=$(($SELECTED + 1))
         fi
         PRINT_MENU
        ;;
-      # return selected option
+      # Returns selected option
       "") return $(($SELECTED)) ;;
     esac
   done
@@ -79,15 +80,17 @@ function MENU() {
 #################################################################################################################
 #
 # USAGE
-# Once the menu.sh script is located on the desired directory, source in your code
+#
+# Once the menu.sh script is located on the desired directory, source in your code:
 #
 # source menu.sh
 # 
 # Now just declare your options in an array.
 # Finally, call the menu with the following:
 #
-# OPTIONS=("option 1" "option 2" "option 3")
-# MENU ${OPTIONS[@]}
+# PROMPT="Choose an option from the menu below: "
+# OPTIONS=("Option 1" "Option 2" "Option 3")
+# MENU "${PROMPT}" "${OPTIONS}"
 #
 # Once you have selected an option, the menu will return the value of the index of the selected option. 
 # For example, you can return the value of the selected option with the following:

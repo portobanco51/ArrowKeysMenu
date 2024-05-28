@@ -6,7 +6,7 @@
 
 ###
 
-<p align="left">This module will allow you to generate an arroy keys interactive selector menu for the users within the terminal, preventing from errors or mistakes when prompting the end user for an input, capturing/returning whether the option value or the option index value.</p>
+<p align="left">This module will allow you to generate an arrow keys interactive selector menu for the users within the terminal, preventing from errors or mistakes when prompting the end user for an input, capturing/returning whether the option value or the option index value.</p>
 
 ###
 
@@ -32,17 +32,19 @@
 ```console
 git clone https://github.com/portobanco51/ArrowKeysMenu.git
 ```
+
 or
+
 ```console
 wget https://raw.githubusercontent.com/portobanco51/ArrowKeysMenu/main/menu.sh
 ```
 
 > [!NOTE]
-> For usage when downloaded with  ```wget```,  just  ```tail -28 menu.sh```
+> For usage when downloaded with `wget`, just `tail -30 menu.sh`
 
 ###
 
-<p align="left">Once downloaded, you're ready to source it in your script, declare the options array, and execute the MENU command alongside the array and get in return the value or the index value selected by the user.<br><br>Here's an example:</p>
+<p align="left">Once downloaded, you're ready to source it in your script, declare the prompt and options array, and execute the MENU command alongside the prompt and array to get in return the value or the index value selected by the user.<br><br>Here's an example:</p>
 
 ###
 
@@ -51,14 +53,15 @@ wget https://raw.githubusercontent.com/portobanco51/ArrowKeysMenu/main/menu.sh
 
 source ./ArrowKeysMenu/menu.sh
 
-OPTIONS=('Option1' 'Option2' 'Option3')
-clear
-MENU ${OPTIONS[@]}
+PS3="Choose an option from the menu below: "
+OPTIONS=('Kali Linux (Best)' 'FreeBSD' 'Ubuntu' 'Windows 11' 'MacOS' 'Other')
+MENU "${PS3}" "${OPTIONS}"
 RESULT=${OPTIONS[$?]}
 
 echo -e "\nYou selected: $RESULT"
 
 ```
+
 <div align="center">
 <!-- ![image](https://github.com/portobanco51/bashMenu/assets/76289550/41b4cd26-87e4-4a20-b6be-591d4a21ca9f) -->
   <img height="250" src="https://github.com/portobanco51/bashMenu/assets/76289550/41b4cd26-87e4-4a20-b6be-591d4a21ca9f"  />
@@ -71,11 +74,11 @@ echo -e "\nYou selected: $RESULT"
 ###
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=linux" height="40" alt="linux logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=bash" height="40" alt="bash logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=vscode" height="40" alt="vscode logo"  />
+  <img src="https://skillicons.dev/icons?i=linux" height="60" alt="linux logo"  />
+  <img width="20" />
+  <img src="https://skillicons.dev/icons?i=bash" height="60" alt="bash logo"  />
+  <img width="20" />
+  <img src="https://skillicons.dev/icons?i=vscode" height="60" alt="vscode logo"  />
 </div>
 
 ###
