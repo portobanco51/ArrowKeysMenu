@@ -37,6 +37,9 @@ or
 wget https://raw.githubusercontent.com/portobanco51/ArrowKeysMenu/main/menu.sh
 ```
 
+> [!NOTE]
+> For usage when downloaded with  ```wget```,  just  ```tail -28 menu.sh```
+
 ###
 
 <p align="left">Once downloaded, you're ready to source it in your script, declare the options array, and execute the MENU command alongside the array and get in return the value or the index value selected by the user.<br><br>Here's an example:</p>
