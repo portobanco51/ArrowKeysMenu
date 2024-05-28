@@ -15,8 +15,8 @@
 ###
 
 <div align="center">
-  <!-- ![image](https://github.com/portobanco51/bashMenu/assets/76289550/ee0b76cc-5a3c-4a12-a866-ff974119eeee) -->
-  <img height="250" src="https://github.com/portobanco51/bashMenu/assets/76289550/ee0b76cc-5a3c-4a12-a866-ff974119eeee"  />
+<!-- ![image](https://github.com/portobanco51/ArrowKeysMenu/assets/76289550/38a3366b-6c08-439e-8ee4-7d2146d3788e) -->
+  <img height="250" src="https://github.com/portobanco51/ArrowKeysMenu/assets/76289550/38a3366b-6c08-439e-8ee4-7d2146d3788e"  />
 </div>
 
 ###
@@ -63,13 +63,13 @@ echo -e "\nYou selected: $RESULT"
 ```
 
 <div align="center">
-<!-- ![image](https://github.com/portobanco51/bashMenu/assets/76289550/41b4cd26-87e4-4a20-b6be-591d4a21ca9f) -->
-  <img height="250" src="https://github.com/portobanco51/bashMenu/assets/76289550/41b4cd26-87e4-4a20-b6be-591d4a21ca9f"  />
+<!-- ![image](https://github.com/portobanco51/ArrowKeysMenu/assets/76289550/8193b011-ceb5-43e9-a151-2b886c2eb62c) -->
+  <img height="350" src="https://github.com/portobanco51/ArrowKeysMenu/assets/76289550/8193b011-ceb5-43e9-a151-2b886c2eb62c"  />
 </div>
 
 ###
 
-<h2 align="center">⚙️ Technologies stack used in the project</h2>
+<h2 align="center">⚙️ Technology stack used in the project</h2>
 
 ###
 
