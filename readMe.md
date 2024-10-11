@@ -71,7 +71,6 @@ echo -e "\nYou selected: $RESULT"
 ```
 
 <div align="center">
-<!-- ![image](https://github.com/portobanco51/ArrowKeysMenu/assets/76289550/8193b011-ceb5-43e9-a151-2b886c2eb62c) -->
   <img height="350" src="https://github.com/portobanco51/ArrowKeysMenu/assets/76289550/8193b011-ceb5-43e9-a151-2b886c2eb62c"  />
 </div>
 
