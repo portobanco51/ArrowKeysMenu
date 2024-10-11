@@ -15,7 +15,6 @@
 ###
 
 <div align="center">
-<!-- ![image](https://github.com/portobanco51/ArrowKeysMenu/assets/76289550/38a3366b-6c08-439e-8ee4-7d2146d3788e) -->
   <img height="250" src="https://github.com/portobanco51/ArrowKeysMenu/assets/76289550/38a3366b-6c08-439e-8ee4-7d2146d3788e"  />
 </div>
 
