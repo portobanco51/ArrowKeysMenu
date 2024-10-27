@@ -12,17 +12,20 @@ function MENU() {
     MAGENTA="$(tput setaf 5; tput bold)"
     CYAN="$(tput setaf 6; tput bold)"
     WHITE="$(tput setaf 7; tput bold)"
-    EOS="$(tput sgr0)"  
+    EOS="$(tput sgr0)"
+    DIV="===================="
+    ARROW="$(tput setaf 3; tput bold)"
+    INDICATOR="-->"
 
-	# ERROR CODES
-	declare -A MENU_ERRORS
-	MENU_ERRORS[INVALID_PROMPT]=100
-	MENU_ERRORS[INVALID_OPTIONS]=101
+    # ERROR CODES
+    declare -A MENU_ERRORS
+    MENU_ERRORS[INVALID_PROMPT]=100
+    MENU_ERRORS[INVALID_OPTIONS]=101
 
-	# ERROR MESSAGES
-	declare -A ERRORS
-	ERROR[INVALID_PROMPT]="\n${RED}MENU ERROR: No prompt provided${EOS}"
-	ERROR[INVALID_OPTIONS]="\n${RED}MENU ERROR: No options provided${EOS}"
+    # ERROR MESSAGES
+    declare -A ERRORS
+    ERROR[INVALID_PROMPT]="\n${RED}MENU ERROR: No prompt provided${EOS}"
+    ERROR[INVALID_OPTIONS]="\n${RED}MENU ERROR: No options provided${EOS}"
 
     # MENU
     if [ -n "$ZSH_VERSION" ]; then
@@ -53,9 +56,6 @@ function MENU() {
         OPTIONS="${@:2}"
         LENGTH="$((${#OPTIONS[@]} - 4))"
     fi
-    DIV="===================="
-    ARROW="$(tput setaf 3; tput bold)"
-    INDICATOR="-->"
 
     # FUNCTIONS
     PRINT_MENU() {
@@ -102,7 +102,9 @@ function MENU() {
         echo -e "\n$GREEN$DIV$EOS"
     }
 
+    # Displays menu
     PRINT_MENU
+
     # Reads user input // Navigation
     if [ -n "$ZSH_VERSION" ]; then
         while read -rsk1 input
