@@ -47,6 +47,7 @@ wget https://raw.githubusercontent.com/portobanco51/ArrowKeysMenu/main/menu.sh
 
 ###
 
+For the BASH Terminal
 ```sh
 #!/bin/bash
 
@@ -54,13 +55,36 @@ wget https://raw.githubusercontent.com/portobanco51/ArrowKeysMenu/main/menu.sh
 source ./ArrowKeysMenu/menu.sh
 
 # Declare prompt
-PROMPT="Choose an option from the menu below: "
+MENUPROMPT="Choose an option from the menu below: "
 
 # Declare options array
 OPTIONS=('Kali Linux (Best)' 'FreeBSD' 'Ubuntu' 'Windows 11' 'MacOS' 'Other')
 
 # Call the function and pass the arguments
-MENU "${PROMPT}" "${OPTIONS}"
+MENU "${MENUPROMPT}" $OPTIONS # w/ quotes
+
+# Extract the selected option
+RESULT=${OPTIONS[$?]}
+
+echo -e "\nYou selected: $RESULT"
+
+```
+
+For the ZSH Terminal
+```sh
+#!/bin/zsh
+
+# Source the script
+source ./ArrowKeysMenu/menu.sh
+
+# Declare prompt
+MENUPROMPT="Choose an option from the menu below: "
+
+# Declare options array
+OPTIONS=('Kali Linux (Best)' 'FreeBSD' 'Ubuntu' 'Windows 11' 'MacOS' 'Other')
+
+# Call the function and pass the arguments
+MENU $MENUPROMPT $OPTIONS # w/o quotes
 
 # Extract the selected option
 RESULT=${OPTIONS[$?]}
