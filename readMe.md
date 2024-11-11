@@ -2,15 +2,15 @@
 
 ###
 
-<h2 align="center">Welcome to ArrowKeys Menu, the game changer for user input selection inside your bash script/terminal</h2>
+<h2 align="center">Welcome to ArrowKeys Menu, the game changer for user input selection inside your bash or zsh terminal</h2>
 
 ###
 
-<p align="left">This module will allow you to generate an arrow keys interactive selector menu for the users within the terminal, preventing from errors or mistakes when prompting the end user for an input, capturing/returning whether the option value or the option index value.</p>
+<p align="left">This module will allow you to generate an arrow keys interactive selector menu for the users within the terminal, preventing from errors or mistakes when prompting the end user for an input, capturing/returning whether the option value or the option index value, all up to you!</p>
 
 ###
 
-<p align="left">Highly customizable to suit your own needs/styles and making life easier for you and your scripts audience.</p>
+<p align="left">Highly customizable, to suit your own needs/styles, making life easier for the developer and better solutions for the audience.</p>
 
 ###
 
