@@ -1,4 +1,4 @@
-<h1 align="center">⬆️ ArrowKeys Menu - Bash Selector ⬇️</h1>
+<h1 align="center">⬆️ ArrowKeys Menu - Bash / Zsh CLI ⬇️</h1>
 
 ###
 
